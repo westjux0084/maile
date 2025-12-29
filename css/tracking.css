@@ -1,0 +1,401 @@
+/* Tracking & Navigation Styles */
+.tracking-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.tracking-map-container {
+    flex: 1;
+    position: relative;
+}
+
+#tracking-map {
+    width: 100%;
+    height: 100%;
+}
+
+/* Stats Overlay */
+.stats-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.stats-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-lg);
+    backdrop-filter: blur(10px);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+/* Control Sheet */
+.control-sheet {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border-radius: 20px 20px 0 0;
+    padding: 1.5rem;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+    z-index: 1000;
+}
+
+.control-sheet-handle {
+    width: 40px;
+    height: 4px;
+    background: var(--border-color);
+    border-radius: 2px;
+    margin: 0 auto 1rem;
+}
+
+.trip-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.trip-route-display {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.route-progress {
+    flex: 1;
+    height: 4px;
+    background: var(--border-color);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.route-progress-bar {
+    height: 100%;
+    background: var(--primary-color);
+    transition: width 0.5s ease;
+}
+
+/* Speed Indicator */
+.speed-indicator {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--bg-color);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+}
+
+.speed-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.speed-unit {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.speed-limit {
+    margin-left: auto;
+    text-align: right;
+}
+
+.speed-limit-value {
+    font-weight: bold;
+    color: var(--success-color);
+}
+
+.speed-limit-label {
+    font-size: 0.75rem;
+    color: var(--text-light);
+}
+
+/* ETA Countdown */
+.eta-countdown {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #00B894 100%);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.eta-time {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.eta-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.eta-address {
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+}
+
+/* Trip Progress */
+.trip-progress-widget {
+    background: var(--bg-color);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+}
+
+.progress-step {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.progress-step:last-child {
+    margin-bottom: 0;
+}
+
+.progress-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.progress-icon.completed {
+    background: var(--success-color);
+    color: var(--white);
+}
+
+.progress-icon.active {
+    background: var(--primary-color);
+    color: var(--white);
+    animation: pulse 2s infinite;
+}
+
+.progress-icon.pending {
+    background: var(--border-color);
+    color: var(--text-light);
+}
+
+.progress-info {
+    flex: 1;
+}
+
+.progress-title {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.progress-time {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.progress-status {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.progress-status.completed {
+    color: var(--success-color);
+}
+
+.progress-status.active {
+    color: var(--primary-color);
+}
+
+.progress-status.pending {
+    color: var(--text-light);
+}
+
+/* Floating Action Buttons */
+.floating-actions {
+    position: absolute;
+    bottom: 250px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    z-index: 1000;
+}
+
+.fab {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.fab:hover {
+    transform: scale(1.1);
+}
+
+.fab-primary {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.fab-secondary {
+    background: var(--white);
+    color: var(--text-color);
+}
+
+.fab-danger {
+    background: var(--accent-color);
+    color: var(--white);
+}
+
+/* Driver Info Card */
+.driver-info-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.driver-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.driver-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.driver-details h4 {
+    margin-bottom: 0.25rem;
+}
+
+.driver-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: #FFD700;
+}
+
+.vehicle-info {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.vehicle-detail {
+    text-align: center;
+}
+
+.vehicle-label {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin-bottom: 0.25rem;
+}
+
+.vehicle-value {
+    font-weight: 500;
+}
+
+/* Navigation Instructions */
+.nav-instructions {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+}
+
+.nav-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.nav-distance {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.nav-street {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stats-card {
+        padding: 1rem;
+    }
+    
+    .stat-value {
+        font-size: 1.2rem;
+    }
+    
+    .control-sheet {
+        padding: 1rem;
+    }
+    
+    .floating-actions {
+        bottom: 200px;
+        right: 10px;
+    }
+    
+    .fab {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+}

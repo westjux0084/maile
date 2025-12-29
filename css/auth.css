@@ -1,0 +1,167 @@
+/* Authentication Page Styles */
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    padding: 20px;
+}
+
+.auth-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 3rem;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: var(--shadow-lg);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.auth-logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.auth-subtitle {
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.phone-input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.country-code {
+    min-width: 100px;
+}
+
+.otp-input-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.otp-input {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.otp-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.role-selection {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.role-card {
+    flex: 1;
+    padding: 1.5rem;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.role-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.role-card.selected {
+    border-color: var(--primary-color);
+    background: rgba(108, 99, 255, 0.1);
+}
+
+.role-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.role-title {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.role-description {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 0.5rem;
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.auth-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-link:hover {
+    text-decoration: underline;
+}
+
+.timer {
+    text-align: center;
+    color: var(--text-light);
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.resend-link {
+    color: var(--primary-color);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.resend-link:disabled {
+    color: var(--text-light);
+    cursor: not-allowed;
+    text-decoration: none;
+}
+
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .role-selection {
+        flex-direction: column;
+    }
+    
+    .otp-input {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+}

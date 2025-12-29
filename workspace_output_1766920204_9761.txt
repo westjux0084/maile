@@ -1,0 +1,5 @@
+total 228
+drwxr-xr-x 2 root root   4096 Dec 28 11:00 .
+drwxr-xr-x 3 root root   4096 Dec 28 11:00 ..
+-rw-r--r-- 1 root root 216074 Dec 28 11:00 index-CNHu30G_.js
+-rw-r--r-- 1 root root   5117 Dec 28 11:00 index-CnvIEneG.css

@@ -1,0 +1,297 @@
+/* Customer Interface Styles */
+.customer-home {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 20px;
+    height: calc(100vh - 80px);
+}
+
+.map-section {
+    display: flex;
+    flex-direction: column;
+}
+
+#customer-map {
+    flex: 1;
+    min-height: 500px;
+    border-radius: var(--border-radius);
+}
+
+.booking-panel {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+    overflow-y: auto;
+    max-height: calc(100vh - 120px);
+}
+
+.booking-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.user-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.user-info p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Destination Styles */
+.destination-section {
+    margin-bottom: 1.5rem;
+}
+
+.section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+}
+
+.destination-input {
+    position: relative;
+}
+
+.destination-input input {
+    padding-left: 40px;
+}
+
+.location-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+}
+
+/* Saved Locations */
+.saved-locations {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.saved-location-item {
+    text-align: center;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.saved-location-item:hover {
+    border-color: var(--primary-color);
+    background: rgba(108, 99, 255, 0.05);
+}
+
+.saved-location-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.saved-location-name {
+    font-size: 0.8rem;
+    color: var(--text-color);
+}
+
+/* Ride Type Selector */
+.ride-type-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.ride-type-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.ride-type-card:hover {
+    border-color: var(--primary-color);
+}
+
+.ride-type-card.selected {
+    border-color: var(--primary-color);
+    background: rgba(108, 99, 255, 0.1);
+}
+
+.ride-type-icon {
+    font-size: 2rem;
+}
+
+.ride-type-info {
+    flex: 1;
+}
+
+.ride-type-name {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.ride-type-details {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.ride-type-price {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Driver Availability */
+.driver-availability {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #00B894 100%);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem;
+}
+
+.driver-count {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.driver-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.eta-info {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+}
+
+/* Cost Display */
+.cost-display {
+    background: var(--bg-color);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem;
+}
+
+.cost-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.cost-row:last-child {
+    margin-bottom: 0;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border-color);
+    font-weight: bold;
+}
+
+.cost-label {
+    color: var(--text-light);
+}
+
+.cost-value {
+    font-weight: 500;
+}
+
+.total-cost {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+/* Recent Destinations */
+.recent-destinations {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.recent-destination-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.recent-destination-item:hover {
+    border-color: var(--primary-color);
+    background: rgba(108, 99, 255, 0.05);
+}
+
+.recent-destination-icon {
+    color: var(--text-light);
+}
+
+.recent-destination-info {
+    flex: 1;
+}
+
+.recent-destination-name {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.recent-destination-address {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+/* Booking Button */
+.booking-actions {
+    position: sticky;
+    bottom: 0;
+    background: var(--white);
+    padding: 1rem 0;
+    border-top: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+    .customer-home {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    
+    #customer-map {
+        min-height: 300px;
+    }
+    
+    .booking-panel {
+        max-height: none;
+    }
+    
+    .ride-type-selector {
+        flex-direction: column;
+    }
+}

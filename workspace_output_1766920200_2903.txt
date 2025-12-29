@@ -1,0 +1,5 @@
+total 16
+drwxr-xr-x 3 root root 4096 Dec 28 11:00 .
+drwxr-xr-x 6 root root 4096 Dec 28 11:09 ..
+drwxr-xr-x 2 root root 4096 Dec 28 11:00 assets
+-rw-r--r-- 1 root root  659 Dec 28 11:00 index.html
